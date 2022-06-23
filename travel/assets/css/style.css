@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-family: "Aleo", serif;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 96px;
+  color: #ffffff;
+}
+h2 {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 53px;
+  color: #f2785c;
+}
+h3 {
+  font-family: "Aleo", serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 42px;
+  color: #0d606f;
+}
+
+.background__wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+  background-image: url(../img/bg-top.jpg), url(../img/bg-bottom.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top, bottom;
+}
+.header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 119px 0px 120px;
+  background-color: rgba(242, 120, 92, 0.7);
+  box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+
+  color: white;
+}
+
+.header__logo-line {
+  font-family: "Magra", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  padding-bottom: 2px;
+}
+
+.logo-object {
+  margin-right: 6px;
+}
+
+.header__navigation {
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.17px;
+}
+.navigation {
+  display: flex;
+  margin-left: 12px;
+  padding: 2px;
+}
+
+.navigation__link {
+  margin-right: 42px;
+}
+
+.navigation__a {
+  color: white;
+  text-decoration: none;
+}
+.button {
+  background-color: #0d606f;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.button:hover {
+  box-shadow: inset 0 0 0 2px #c5e2f0;
+}
+
+.button:active {
+  background-color: #74c2cf;
+}
+
+.button__header {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 2px 3px rgba(13, 96, 111, 0.16);
+  padding-right: 31px;
+}
+.preview {
+  width: 100%;
+  height: 643px;
+}
+.preview__content {
+  max-width: 892px;
+  height: 389px;
+  margin: 32px 0px 0px 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.preview__content p {
+  font-family: "Aleo", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: white;
+  margin-bottom: 14px;
+}
+
+.preview__search {
+  color: #f2785c;
+  position: relative;
+}
+.preview__input {
+  width: 100%;
+  height: 95px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  border: none;
+  padding-left: 41px;
+  font-family: "Aleo", serif;
+  font-style: italic;
+  font-size: 24px;
+  color: #f2785c;
+}
+
+.preview__input::placeholder {
+  font-family: "Aleo", serif;
+  font-style: italic;
+  font-size: 24px;
+  color: #f2785c;
+}
+
+.preview__button {
+  height: 59px;
+  width: 228px;
+  font-size: 24px;
+  line-height: 32px;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
+    0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+
+.steps {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.layout-3-column {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 131px;
+}
+.steps__step {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  /* width: 34%; */
+  font-family: "Aleo", serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0d606f;
+}
+
+.steps__icon {
+  width: 100px;
+  height: 100px;
+  background: #f2785c;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+}
+.destination {
+  margin-top: 97px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.destination__slider {
+  width: 100%;
+  height: 800px;
+  margin-top: 46px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  overflow: hidden;
+}
+
+.destination-1-slider {
+  position: relative;
+}
+
+.destination-1-photo {
+  width: 800px;
+  height: 800px;
+  border-radius: 16px;
+}
+
+.destianation__country {
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 42px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 40px;
+  left: 15px;
+}
+
+.destination__dots {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 10px;
+}
+
+.destination__dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  background: rgba(242, 120, 92, 0.5);
+}
+
+.selected__dot {
+  background: #f2785c;
+}
+
+.arrow__button {
+  width: 228px;
+  font-size: 24px;
+  display: flex;
+  align-items: flex-end;
+  gap: 12.5px;
+  padding: 18.25px 31px 18.25px 33.5px;
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
+    0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+/*  */
+.stories {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.stories__layout {
+  margin-top: 37px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 1270px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 43px 120px 40px 120px;
+}
+
+.stories__item {
+  display: flex;
+  gap: 40px;
+  max-height: 250px;
+}
+.stories__description {
+  overflow: hidden;
+}
+
+.stories_photo {
+  border-radius: 16px;
+  filter: drop-shadow(0px 4px 4px #0d606f);
+}
+
+.stories__description-text {
+  margin-top: 24px;
+  font-family: "Aleo", serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0d606f;
+}
+
+.stories__description-link {
+  font-family: "Aleo", serif;
+  font-size: 20px;
+
+  font-weight: 700;
+  color: #0d606f;
+}
+
+.stories__button {
+  margin-top: 9px;
+  margin-left: 4px;
+  display: flex;
+  justify-content: center;
+}
+/*  */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 61px;
+  width: 100%;
+}
+.footer__layout {
+  width: 33.3%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+}
+.footer__rights {
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.footer__social {
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  gap: 21.4px;
+}
+
+.footer__social-item a img {
+  display: block;
+}
