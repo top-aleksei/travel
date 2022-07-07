@@ -12,44 +12,90 @@
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="icon" href="./assets/favico.svg" />
-    <script src="./assets/index.js"></script>
+
     <title>Travel#1</title>
   </head>
   <body>
     <div class="background__wrapper">
-      <header class="header">
-        <div class="header__logo-line">
-          <img
-            src="./assets/img/travel-logo.svg"
-            alt="logo"
-            class="logo-object"
-          /><span>Travel Portal</span>
-        </div>
-        <nav class="header__navigation">
-          <ul class="navigation">
-            <li class="navigation__link">
-              <a href="#preview" class="navigation__a">How It Works</a>
+      <div class="header__wrapper">
+        <header class="header">
+          <div class="header__logo-line">
+            <img
+              src="./assets/img/travel-logo.svg"
+              alt="logo"
+              class="logo-object"
+            /><span class="hide-on-mobile">Travel Portal</span>
+          </div>
+          <nav class="header__navigation">
+            <ul class="navigation hide-on-650">
+              <li class="navigation__link">
+                <a href="#preview" class="navigation__a">How It Works</a>
+              </li>
+              <li class="navigation__link">
+                <a href="#steps" class="navigation__a">Plan Your Trip</a>
+              </li>
+              <li class="navigation__link">
+                <a href="#destination" class="navigation__a">Destinations</a>
+              </li>
+              <li class="navigation__link">
+                <a href="#stories" class="navigation__a">Travel Stories</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__buttons">
+            <button class="button button__header hide-on-650">Login</button>
+            <img
+              src="./assets/img/mobile/burger-icon.svg"
+              alt="menu"
+              class="show-burger show-on-650"
+            />
+          </div>
+        </header>
+
+        <div class="burger-menu">
+          <div class="burger-cross">
+            <img
+              src="./assets/img/mobile/cross.svg"
+              alt="X"
+              class="burger-cross-img"
+            />
+          </div>
+          <ul class="burger-navigation">
+            <li class="burger-item">
+              <a href="#preview" class="burger-link navigation__a"
+                >How It Works</a
+              >
             </li>
-            <li class="navigation__link">
-              <a href="#steps" class="navigation__a">Plan Your Trip</a>
+            <li class="burger-item">
+              <a href="#steps" class="burger-link navigation__a"
+                >Plan Your Trip</a
+              >
             </li>
-            <li class="navigation__link">
-              <a href="#destination" class="navigation__a">Destinations</a>
+            <li class="burger-item">
+              <a href="#destination" class="burger-link navigation__a"
+                >Destinations</a
+              >
             </li>
-            <li class="navigation__link">
-              <a href="#stories" class="navigation__a">Travel Stories</a>
+            <li class="burger-item">
+              <a href="#stories" class="burger-link navigation__a"
+                >Travel Stories</a
+              >
+            </li>
+            <li class="burger-item">
+              <a href="" class="burger-link navigation__a">Account</a>
+            </li>
+            <li class="burger-item">
+              <a href="#smedia" class="burger-link navigation__a"
+                >Social Media</a
+              >
             </li>
           </ul>
-        </nav>
-        <div class="header__buttons">
-          <button class="button button__header">Login</button>
         </div>
-      </header>
-      <main class="main">
+
         <section class="preview" id="preview">
           <div class="preview__content">
-            <h1>Explore the beauty of the World</h1>
-            <p>
+            <h1 class="hide-on-650">Explore the beauty of the World</h1>
+            <p class="hide-on-650">
               Receive personalized recommendations for countries, hotels,
               activities and more
             </p>
@@ -63,72 +109,134 @@
             </form>
           </div>
         </section>
-        <section class="steps" id="steps">
-          <h2>3 STEPS TO THE PERFECT TRIP</h2>
-          <div class="layout-3-column">
-            <div class="steps__step">
-              <div class="steps__icon">
-                <img src="./assets/img/step1.svg" alt="l1" class="step__ico" />
-              </div>
-              <span>Tell us what you want to do</span>
+      </div>
+      <section class="steps" id="steps">
+        <h2>3 STEPS TO THE PERFECT TRIP</h2>
+        <div class="layout-3-column">
+          <div class="steps__step step-1-mobile">
+            <div class="steps__icon">
+              <img
+                src="./assets/img/step1.svg"
+                alt="l1"
+                class="step__ico hide-on-mobile"
+              />
+              <img
+                src="./assets/img/mobile/step1.svg"
+                alt="l1"
+                class="step__ico show-on-mobile"
+              />
             </div>
-            <div class="steps__step" style="margin-left: 72px">
-              <div class="steps__icon">
-                <img src="./assets/img/step2.svg" alt="l2" class="step__ico" />
-              </div>
-              <span>Share us preferable dates </span>
-            </div>
-            <div class="steps__step">
-              <div class="steps__icon">
-                <img src="./assets/img/step3.svg" alt="l3" class="step__ico" />
-              </div>
-              <span>We will give you recommendations</span>
-            </div>
+            <span>Tell us what you want to do</span>
           </div>
-        </section>
-        <section class="destination" id="destination">
-          <h2>POPULAR DESTINATIONS</h2>
-          <div class="destination__slider">
-            <div class="destination-1-slider">
+          <div class="steps__step middle-step-1440">
+            <div class="steps__icon">
               <img
-                src=".//assets/img/island.jpg"
-                alt="island"
-                class="destination-1-photo"
+                src="./assets/img/step2.svg"
+                alt="l2"
+                class="step__ico hide-on-mobile"
               />
-              <span class="destianation__country">ISLAND</span>
-            </div>
-            <div class="destination-1-slider">
               <img
-                src=".//assets/img/japan.jpg"
-                alt="japan"
-                class="destination-1-photo"
+                src="./assets/img/mobile/step2.svg"
+                alt="l2"
+                class="step__ico show-on-mobile"
               />
-              <span class="destianation__country">JAPAN</span>
             </div>
-            <div class="destination-1-slider">
-              <img
-                src=".//assets/img/usa.jpg"
-                alt="usa"
-                class="destination-1-photo"
-              />
-              <span class="destianation__country">USA</span>
-            </div>
+            <span>Share us preferable dates </span>
           </div>
-          <div class="destination__dots">
-            <div class="destination__dot"></div>
+          <div class="steps__step step-3-mobile">
+            <div class="steps__icon">
+              <img
+                src="./assets/img/step3.svg"
+                alt="l3"
+                class="step__ico hide-on-mobile"
+              />
+              <img
+                src="./assets/img/mobile/step3.svg"
+                alt="l3"
+                class="step__ico show-on-mobile"
+              />
+            </div>
+            <span>We will give you recommendations</span>
+          </div>
+        </div>
+      </section>
+      <section class="destination" id="destination">
+        <h2>POPULAR DESTINATIONS</h2>
+        <div class="destination__slider">
+          <div class="destination-1-slider">
+            <img
+              src=".//assets/img/island.jpg"
+              alt="spain"
+              class="destination-1-photo hide-on-mobile"
+            />
+            <img
+              src=".//assets/img/mobile/island.jpg"
+              alt="spain"
+              class="destination-1-photo show-on-mobile"
+            />
+
+            <span class="destianation__country">SPAIN</span>
+          </div>
+          <div class="destination-1-slider">
+            <img
+              src=".//assets/img/japan.jpg"
+              alt="japan"
+              class="destination-1-photo hide-on-mobile"
+            />
+            <img
+              src=".//assets/img/mobile/japan.jpg"
+              alt="japan"
+              class="destination-1-photo show-on-mobile"
+            />
+            <span class="destianation__country">JAPAN</span>
+          </div>
+          <div class="destination-1-slider">
+            <img
+              src=".//assets/img/usa.jpg"
+              alt="usa"
+              class="destination-1-photo hide-on-mobile"
+            />
+            <img
+              src=".//assets/img/mobile/usa.jpg"
+              alt="usa"
+              class="destination-1-photo show-on-mobile"
+            />
+            <span class="destianation__country">USA</span>
+          </div>
+          <div class="arrows show-on-mobile">
+            <img src="./assets/img/mobile/left-arrow.svg" alt="left arrow" />
+            <img
+              src="./assets/img/mobile/right-arrow.svg"
+              alt="right arrow  "
+            />
+          </div>
+          <div class="destination__dots show-on-mobile">
             <div class="destination__dot selected__dot"></div>
             <div class="destination__dot"></div>
+            <div class="destination__dot"></div>
           </div>
-          <div class="destination__button">
-            <button class="button arrow__button">
-              <img
-                src="./assets/img/arrow.svg"
-                alt="arrow"
-                class="arrow-svg"
-              />Find More
-            </button>
-          </div>
-        </section>
+        </div>
+        <div class="destination__dots hide-on-mobile">
+          <div class="destination__dot"></div>
+          <div class="destination__dot selected__dot"></div>
+          <div class="destination__dot"></div>
+        </div>
+        <div class="destination__button">
+          <button class="button arrow__button">
+            <img
+              src="./assets/img/arrow.svg"
+              alt="arrow"
+              class="arrow-svg hide-on-mobile"
+            />
+            <img
+              src="./assets/img/mobile/arrow.svg"
+              alt="arrow"
+              class="arrow-svg show-on-mobile"
+            />Find More
+          </button>
+        </div>
+      </section>
+      <div class="footer__wrapper">
         <section class="stories" id="stories">
           <h2>TRAVEL STORIES</h2>
           <div class="stories__layout">
@@ -136,7 +244,12 @@
               <img
                 src="./assets/img/stories1.jpg"
                 alt="story1"
-                class="stories_photo"
+                class="stories_photo hide-on-mobile"
+              />
+              <img
+                src="./assets/img/mobile/stories1.jpg"
+                alt="story1"
+                class="stories_photo show-on-mobile"
               />
               <div class="stories__description">
                 <h3>10 Photos of Attractive Thailand</h3>
@@ -158,7 +271,12 @@
               <img
                 src="./assets/img/stories2.jpg"
                 alt="story2"
-                class="stories_photo"
+                class="stories_photo hide-on-mobile"
+              />
+              <img
+                src="./assets/img/mobile/stories2.jpg"
+                alt="story2"
+                class="stories_photo show-on-mobile"
               />
               <div class="stories__description">
                 <h3>Canyonlands National Park, Utah</h3>
@@ -180,7 +298,12 @@
               <img
                 src="./assets/img/stories3.jpg"
                 alt="story3"
-                class="stories_photo"
+                class="stories_photo hide-on-mobile"
+              />
+              <img
+                src="./assets/img/mobile/stories3.jpg"
+                alt="story3"
+                class="stories_photo show-on-mobile"
               />
               <div class="stories__description">
                 <h3>I left my heart in the Mountains!</h3>
@@ -202,7 +325,12 @@
               <img
                 src="./assets/img/stories4.jpg"
                 alt="story4"
-                class="stories_photo"
+                class="stories_photo hide-on-mobile"
+              />
+              <img
+                src="./assets/img/mobile/stories4.jpg"
+                alt="story4"
+                class="stories_photo show-on-mobile"
               />
               <div class="stories__description">
                 <h3>The Longest journey in my life!</h3>
@@ -225,40 +353,47 @@
                 <img
                   src="./assets/img/arrow.svg"
                   alt="arrow"
-                  class="arrow-svg"
+                  class="arrow-svg hide-on-mobile"
+                />
+                <img
+                  src="./assets/img/mobile/arrow.svg"
+                  alt="arrow"
+                  class="arrow-svg show-on-mobile"
                 />See More
               </button>
             </div>
           </div>
         </section>
-      </main>
-      <footer class="footer">
-        <div class="footer__layout"></div>
-        <div class="footer__layout">
-          <span class="footer__rights"
-            >All Rights Reserved © Travel Portal</span
-          >
-        </div>
-        <div class="footer__layout">
-          <ul class="footer__social">
-            <li class="footer__social-item">
-              <a href="https://rs.school/" target="_blank"
-                ><img src="./assets/img/footer1.svg" alt="insta"
-              /></a>
-            </li>
-            <li class="footer__social-item">
-              <a href="https://github.com/top-aleksei" target="_blank"
-                ><img src="./assets/img/footer2.svg" alt="youtube"
-              /></a>
-            </li>
-            <li class="footer__social-item">
-              <a href="https://rs.school/" target="_blank"
-                ><img src="./assets/img/footer3.svg" alt="twitter"
-              /></a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+
+        <footer class="footer" id="smedia">
+          <div class="footer__layout hide-on-650"></div>
+          <div class="footer__layout hide-on-650">
+            <span class="footer__rights"
+              >All Rights Reserved © Travel Portal</span
+            >
+          </div>
+          <div class="footer__layout">
+            <ul class="footer__social">
+              <li class="footer__social-item">
+                <a href="https://rs.school/" target="_blank"
+                  ><img src="./assets/img/footer1.svg" alt="insta"
+                /></a>
+              </li>
+              <li class="footer__social-item">
+                <a href="https://github.com/top-aleksei" target="_blank"
+                  ><img src="./assets/img/footer2.svg" alt="youtube"
+                /></a>
+              </li>
+              <li class="footer__social-item">
+                <a href="https://rs.school/" target="_blank"
+                  ><img src="./assets/img/footer3.svg" alt="twitter"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
     </div>
+    <script src="./assets/index.js"></script>
   </body>
 </html>
