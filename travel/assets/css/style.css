@@ -65,7 +65,7 @@ h3 {
   position: relative;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 391px) {
   .header__wrapper {
     background-image: url(../img/mobile/bg-top.jpg);
     max-height: 251px;
@@ -80,7 +80,7 @@ h3 {
   background-position: top 92px left 0px;
   min-height: 1331px;
 }
-@media (max-width: 390px) {
+@media (max-width: 391px) {
   .footer__wrapper {
     background-image: url(../img/mobile/bg-bottom.jpg);
     background-position: top 29px left 0px;
@@ -112,7 +112,7 @@ h3 {
     padding: 45px 15px 0 15px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 391px) {
   .header {
     background-color: transparent;
     box-shadow: none;
@@ -731,7 +731,7 @@ h3 {
   display: none;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 391px) {
   .hide-on-390 {
     display: none;
   }
