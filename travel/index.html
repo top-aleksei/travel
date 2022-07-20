@@ -162,65 +162,95 @@
       </section>
       <section class="destination" id="destination">
         <h2>POPULAR DESTINATIONS</h2>
-        <div class="destination__slider">
-          <div class="destination-1-slider">
-            <img
-              src=".//assets/img/island.jpg"
-              alt="spain"
-              class="destination-1-photo hide-on-mobile"
-            />
-            <img
-              src=".//assets/img/mobile/island.jpg"
-              alt="spain"
-              class="destination-1-photo show-on-mobile"
-            />
+        <div class="slider__wrapper">
+          <div class="destination__slider">
+            <div class="destination-1-slider item-superleft">
+              <img
+                src=".//assets/img/usa.jpg"
+                alt="usa"
+                class="destination-1-photo hide-on-mobile"
+              />
+              <img
+                src=".//assets/img/mobile/usa.jpg"
+                alt="usa"
+                class="destination-1-photo show-on-mobile"
+              />
+              <span class="destianation__country">USA</span>
+            </div>
+            <div class="destination-1-slider item-left">
+              <img
+                src=".//assets/img/island.jpg"
+                alt="spain"
+                class="destination-1-photo hide-on-mobile"
+              />
+              <img
+                src=".//assets/img/mobile/island.jpg"
+                alt="spain"
+                class="destination-1-photo show-on-mobile"
+              />
 
-            <span class="destianation__country">SPAIN</span>
-          </div>
-          <div class="destination-1-slider">
-            <img
-              src=".//assets/img/japan.jpg"
-              alt="japan"
-              class="destination-1-photo hide-on-mobile"
-            />
-            <img
-              src=".//assets/img/mobile/japan.jpg"
-              alt="japan"
-              class="destination-1-photo show-on-mobile"
-            />
-            <span class="destianation__country">JAPAN</span>
-          </div>
-          <div class="destination-1-slider">
-            <img
-              src=".//assets/img/usa.jpg"
-              alt="usa"
-              class="destination-1-photo hide-on-mobile"
-            />
-            <img
-              src=".//assets/img/mobile/usa.jpg"
-              alt="usa"
-              class="destination-1-photo show-on-mobile"
-            />
-            <span class="destianation__country">USA</span>
+              <span class="destianation__country">SPAIN</span>
+            </div>
+            <div class="destination-1-slider item-active">
+              <img
+                src=".//assets/img/japan.jpg"
+                alt="japan"
+                class="destination-1-photo hide-on-mobile"
+              />
+              <img
+                src=".//assets/img/mobile/japan.jpg"
+                alt="japan"
+                class="destination-1-photo show-on-mobile"
+              />
+              <span class="destianation__country">JAPAN</span>
+            </div>
+            <div class="destination-1-slider item-right">
+              <img
+                src=".//assets/img/usa.jpg"
+                alt="usa"
+                class="destination-1-photo hide-on-mobile"
+              />
+              <img
+                src=".//assets/img/mobile/usa.jpg"
+                alt="usa"
+                class="destination-1-photo show-on-mobile"
+              />
+              <span class="destianation__country">USA</span>
+            </div>
+            <div class="destination-1-slider item-superright">
+              <img
+                src=".//assets/img/island.jpg"
+                alt="spain"
+                class="destination-1-photo hide-on-mobile"
+              />
+              <img
+                src=".//assets/img/mobile/island.jpg"
+                alt="spain"
+                class="destination-1-photo show-on-mobile"
+              />
+
+              <span class="destianation__country">SPAIN</span>
+            </div>
           </div>
           <div class="arrows show-on-mobile">
-            <img src="./assets/img/mobile/left-arrow.svg" alt="left arrow" />
+            <img
+              src="./assets/img/mobile/left-arrow.svg"
+              alt="left arrow"
+              id="LMB"
+            />
             <img
               src="./assets/img/mobile/right-arrow.svg"
-              alt="right arrow  "
+              alt="right arrow "
+              id="RMB"
             />
           </div>
-          <div class="destination__dots show-on-mobile">
-            <div class="destination__dot selected__dot"></div>
+          <div class="destination__dots">
             <div class="destination__dot"></div>
+            <div class="destination__dot selected__dot"></div>
             <div class="destination__dot"></div>
           </div>
         </div>
-        <div class="destination__dots hide-on-mobile">
-          <div class="destination__dot"></div>
-          <div class="destination__dot selected__dot"></div>
-          <div class="destination__dot"></div>
-        </div>
+
         <div class="destination__button">
           <button class="button arrow__button">
             <img

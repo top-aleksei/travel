@@ -369,20 +369,20 @@ h3 {
 }
 
 .destination__slider {
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
   margin: 46px 0 10px;
   display: flex;
-  justify-content: center;
   gap: 60px;
-  overflow: hidden;
+  position: relative;
+  left: -1400px;
 }
 @media (max-width: 1150px) {
   .destination__slider {
     padding: 0px 15px;
     position: relative;
     margin-top: 20px;
-    justify-content: left;
+    left: -840px;
   }
 }
 
@@ -410,6 +410,7 @@ h3 {
   margin-top: 24px;
   margin-bottom: 40px;
   display: flex;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -649,7 +650,7 @@ h3 {
 @media (max-width: 1150px) {
   .destination__dots {
     position: absolute;
-    bottom: 12px;
+    bottom: 22px;
     left: calc(50% - 18px);
 
     display: flex;
@@ -673,7 +674,8 @@ h3 {
 
 .arrows {
   position: absolute;
-  top: 85px;
+  top: 105px;
+  left: 15px;
   margin: 5px;
   display: flex;
   gap: 290px;
@@ -737,4 +739,67 @@ h3 {
   .show-on-390 {
     display: block;
   }
+}
+
+.slider__wrapper {
+  /* transition: all 1s; */
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes move-right {
+  from {
+    left: -1400px;
+  }
+  to {
+    left: -2260px;
+  }
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 1.5s;
+}
+
+@keyframes move-left {
+  from {
+    left: -1400px;
+  }
+  to {
+    left: -540px;
+  }
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 1.5s;
+}
+
+@keyframes mobile-left {
+  from {
+    left: -840px;
+  }
+  to {
+    left: -420px;
+  }
+}
+
+.mobile-left {
+  animation-name: mobile-left;
+  animation-duration: 1.5s;
+}
+
+@keyframes mobile-right {
+  from {
+    left: -840px;
+  }
+  to {
+    left: -1260px;
+  }
+}
+
+.mobile-right {
+  animation-name: mobile-right;
+  animation-duration: 1.5s;
 }
