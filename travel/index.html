@@ -17,6 +17,42 @@
   </head>
   <body>
     <div class="background__wrapper">
+      <div class="pop-up">
+        <div class="pop-up__login">
+          <p class="pop-up__title">Log in to your account</p>
+          <div class="pop-up__signInWith hide-on-register">
+            <button class="pop-up__button fb-button">
+              <img src="./assets/img/fb.svg" alt="facebook" class="fb" />
+              Sign In with Facebook
+            </button>
+            <button class="pop-up__button google-button">
+              <img src="./assets/img/google.svg" alt="facebook" class="fb" />
+              Sign In with Google
+            </button>
+          </div>
+          <span class="or-devider hide-on-register">or</span>
+          <form action="log-in">
+            <div class="log-in__container">
+              <label for="email">E-mail</label>
+              <input type="email" id="input-email" />
+              <label for="email">Password</label>
+              <input type="current-password" id="input-password" />
+            </div>
+          </form>
+          <button class="pop-up__button signIn-button">Sign In</button>
+          <span class="forget-password hide-on-register"
+            ><a href="#" class="pop-up__links">Forgot your password?</a></span
+          >
+          <span class="dont-have-accouunt"
+            >Don't have an account?<a
+              href="#"
+              class="pop-up__links"
+              id="register-link"
+              >Register</a
+            >
+          </span>
+        </div>
+      </div>
       <div class="header__wrapper">
         <header class="header">
           <div class="header__logo-line">
@@ -82,7 +118,9 @@
               >
             </li>
             <li class="burger-item">
-              <a href="#" class="burger-link navigation__a">Account</a>
+              <a href="#" class="burger-link navigation__a" id="mobile-login"
+                >Account</a
+              >
             </li>
             <li class="burger-item">
               <a href="#smedia" class="burger-link navigation__a"

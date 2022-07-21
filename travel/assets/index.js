@@ -23,6 +23,60 @@ const menu = document.querySelector(".burger-menu");
 const burgerOpen = document.querySelector(".show-burger");
 const burgerClose = document.querySelector(".burger-cross-img");
 
+const D_LOGIN_BTN = document.querySelector(".button__header");
+const M_LOGIN_BTN = document.getElementById("mobile-login");
+const POPUP = document.querySelector(".pop-up");
+const POPUP_MENU = document.querySelector(".pop-up__login");
+const body = document.body;
+const SIGN_IN_BTN = document.querySelector(".signIn-button");
+const REGISTER = document.getElementById("register-link");
+const hideOnRegister = document.querySelectorAll(".hide-on-register");
+
+//// POP - UP //// POP - UP //// POP - UP //// POP - UP //// POP - UP //// POP - UP ////
+const hidePopup = () => {
+  POPUP.classList.remove("show-popup");
+  body.classList.remove("lock");
+};
+const showPopup = () => {
+  POPUP.classList.add("show-popup");
+  body.classList.add("lock");
+};
+
+const alertInput = () => {
+  let x1 = document.getElementById("input-email").value;
+  let x2 = document.getElementById("input-password").value;
+  alert(`email: ${x1}\npassword: ${x2}`);
+};
+const toCreateAccount = () => {
+  hideOnRegister.forEach((el) => el.classList.add("hide"));
+  POPUP_MENU.classList.add("create-size");
+  document.querySelector(".pop-up__title").innerHTML = "Create account";
+  SIGN_IN_BTN.innerHTML = "Sign Up";
+  SIGN_IN_BTN.removeEventListener("click", alertInput);
+  document.querySelector(".dont-have-accouunt").firstChild.data =
+    "Already have an account? ";
+  REGISTER.firstChild.data = "Log in";
+};
+
+D_LOGIN_BTN.addEventListener("click", showPopup);
+M_LOGIN_BTN.addEventListener("click", showPopup);
+POPUP.addEventListener("click", (e) => {
+  if (e.target.classList.contains("pop-up")) {
+    hidePopup();
+    hideOnRegister.forEach((el) => el.classList.remove("hide"));
+    POPUP_MENU.classList.remove("create-size");
+    document.querySelector(".pop-up__title").innerHTML =
+      "Log in to your account";
+    SIGN_IN_BTN.innerHTML = "Sign In";
+    SIGN_IN_BTN.addEventListener("click", alertInput);
+    document.querySelector(".dont-have-accouunt").firstChild.data =
+      "Don't have an account? ";
+    REGISTER.firstChild.data = "Register";
+  }
+});
+SIGN_IN_BTN.addEventListener("click", alertInput);
+REGISTER.addEventListener("click", toCreateAccount);
+
 // // SLIDER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 let startSlider = document.querySelectorAll(".destination-1-slider");
 let DESCTOP_BTN_LEFT = document.getElementsByClassName("item-left")[0];
@@ -123,33 +177,6 @@ SLIDER.addEventListener("animationend", (e) => {
   M_BTN_RIGHT.addEventListener("click", moveMobileRight);
 });
 
-// let startSlider = document.querySelectorAll(".destination-1-slider");
-// let slider = document.querySelector(".destination__slider");
-// let n = document.querySelector(".destination-1-slider").cloneNode(true);
-// console.log(n);
-
-// // slider.appendChild(n);
-// // slider.insertAdjacentElement("beforeend", n[0]);
-
-// let leftDesctopButton = startSlider[Math.trunc(startSlider.length / 2) - 1];
-// let rightDesctopButton = startSlider[Math.trunc(startSlider.length / 2) + 1];
-
-// let addRightElements = function (ob) {
-//   step = 1;
-//   document.getElementsByClassName("slider__wrapper")[0].style = "right: 860px";
-//   step++;
-//   setTimeout(() => {
-//     slider.appendChild(n);
-//     startSlider[0].remove();
-//     document.getElementsByClassName("slider__wrapper")[0].style = "right: 0px";
-//   }, 1000);
-// };
-
-// rightDesctopButton.addEventListener("click", () => {
-//   addRightElements();
-//   console.log(startSlider);
-// });
-
 // BURGGER MENUUU--------------------------
 
 document.addEventListener("click", (e) => {
@@ -174,3 +201,5 @@ menu.querySelectorAll(".burger-link").forEach((link) => {
     menu.classList.remove("active");
   });
 });
+
+///////////////////////////
